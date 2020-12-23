@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <h1>Hello this is the index</h1>        
+        <ul>
+            <div class="all">
+                <% for (let i = 0; i < data.length; i++){%>
+                
+                    <div class="<%=data[i].firstName%>">
+                        <h1><%= data[i].firstName %></h1> 
+                        <a href="">
+
+
+                        </a>
+
+                        <a href="/main/<%=data[i].id%>">
+                            <img src="<%=data[i].image%>" alt="not working">
+                        </a>
+                        
+
+                    </div>
+                <%}%>  
+            </div>
+
+
+
+
+        </ul>
+
+
+
+</body>
+</html>

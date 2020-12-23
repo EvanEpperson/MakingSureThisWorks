@@ -1,0 +1,28 @@
+body{
+    
+}
+
+img{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+
+}
+
+.all{
+    display: flex;
+    flex-direction: row;
+    justify-items:space-between; ;
+}
+
+.Matt, .Jerrica, .Brendan, .Leland{
+    color: blue;
+    width: 200px;
+    height: 200px;
+    margin: 20px;
+}
+
+
+
+
+
