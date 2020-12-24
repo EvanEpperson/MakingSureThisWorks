@@ -53,7 +53,7 @@ app.use('/sessions', sessionsController)
 
 
 ///////////////////////////////////////////////////////////////////
-app.get('/', (req, res) => {
+app.get('/main', (req, res) => {
     res.redirect('/main')
 })
 
