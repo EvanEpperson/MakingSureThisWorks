@@ -1,43 +1,36 @@
-const { escapeXML } = require('ejs');
+// const { escapeXML } = require('ejs');
 const express = require('express');
 const Main = require('../models/main.js')
 const main = express.Router()
 
+const isAuthenticated = (req, res, next) => {
+  if (req.session.currentUser) {
+    return next();
+  } else {
+    res.redirect("/sessions/new");
+  }
+};
 
 main.get('/', (req, res) => {
     Main.find({}, (err, allMains) => {
-           res.render("main/index.ejs", 
-           {
+           res.render("main/index.ejs", {
              data: allMains,
+             currentUser: req.session.currentUser
            });
     })
  
 })
 
-main.get('/:index', (req, res) => {
+main.get('/:index', isAuthenticated, (req, res) => {
     Main.findById(req.params.index, (err, allMains) => {
     res.render("main/show.ejs", 
     {
       data: allMains,
+      currentUser: req.session.currentUser
     });
     })
 
 })
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 main.get('/setup/seed', (req, res) => {

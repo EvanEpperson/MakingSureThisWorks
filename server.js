@@ -4,6 +4,7 @@ const mongoose = require("mongoose");
 const app = express();
 const db = mongoose.connection;
 require("dotenv").config();
+const session = require("express-session");
 
 
 const PORT = process.env.PORT || 3003;
@@ -17,9 +18,7 @@ mongoose.connect(MONGODB_URI, {
 });
 
 
-db.on("error", (err) => console.log(err.message + " is Mongod not running?"));
-db.on("connected", () => console.log("mongo connected: ", MONGODB_URI));
-db.on("disconnected", () => console.log("mongo disconnected"));
+
 
 ////////////////////////////////////////////////////////////////////
 // middleware
@@ -28,6 +27,18 @@ app.use(express.static("public"));
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 app.use(methodOverride("_method"));
+app.use(
+  session({
+    secret: process.env.SECRET,
+    resave: false,
+    saveUninitialized: false,
+  })
+);
+
+
+db.on("error", (err) => console.log(err.message + " is Mongod not running?"));
+db.on("connected", () => console.log("mongo connected: ", MONGODB_URI));
+db.on("disconnected", () => console.log("mongo disconnected"));
 
 
 ////////////////////////////////////////////////////////////////////
@@ -35,6 +46,10 @@ app.use(methodOverride("_method"));
 ///////////////////////////////////////////////////////////////////
 const mainController = require('./controllers/main_controller.js')
 app.use('/main', mainController)
+const userController = require("./controllers/users_controllers.js")
+app.use('/users', userController)
+const sessionsController = require("./controllers/sessions_controller.js");
+app.use('/sessions', sessionsController)
 
 
 ///////////////////////////////////////////////////////////////////
