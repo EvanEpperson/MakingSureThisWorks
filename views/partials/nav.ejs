@@ -7,7 +7,7 @@
 </head>
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#">
+    <a class="navbar-brand" href="/main">
       <img src="https://ga-core.s3.amazonaws.com/cms/files/files/000/000/886/original/ga-logo-gear.png" alt="" width="30" height="24">
     </a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -21,7 +21,7 @@
     </li>
   <li>
     <form action="/sessions?_method=DELETE" method="post">
-      <input type="submit" value="Log Out" class="btn-small red">
+      <input type="submit" value="Log Out" class="btn btn-danger">
     </form>
   </li>
   <%} else {%>
@@ -34,11 +34,11 @@
         <%}%>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Dropdown
+            Explore More Options
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" href="#">learn about more teachers</a></li>
-            <li><a class="dropdown-item" href="#">learn about GA</a></li>
+            <li><a class="dropdown-item" href="#">Learn About More Teachers</a></li>
+            <li><a class="dropdown-item" href="#">Learn About GA</a></li>
           </ul>
         </li>
       </ul>
