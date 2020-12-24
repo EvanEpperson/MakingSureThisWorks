@@ -19,12 +19,18 @@
         <div class="special">
             <%=data.specializations%>
         </div>
-        <div class="">
+        <div class="phone">
             <%=data.phone%>
         </div>
+        <div class="email">
+            <%=data.email%>
+        </div>
+        <div class="time">
+            <%=data.time%>
+            <p>Local Time: <span id="datetime"></span></p>
+            
+        </div>       
         
-        <%=data.email%>
-        <%=data.time%>
         <img src="<%= data.image %> " alt="Image Not Found">
     </div>
 
@@ -32,6 +38,12 @@
             <button type="submit" class="btn btn-primary">Buy Another Teacher </button>
         </form>
 
+
+            <script>
+                var dt = new Date();
+                    document.getElementById("datetime").innerHTML = dt.toLocaleTimeString();
+            </script>
+<!-- got the time from this website https://www.arclab.com/en/kb/htmlcss/display-date-time-javascript-php-ssi.html#:~:text=First%20we%20need%20to%20define,%3E%20or%20element.&text=Now%20let's%20assign%20the%20date,the%20id%3D%22datetime%22. -->
     
 </body>
 </html>

@@ -20,7 +20,7 @@ main.get('/', (req, res) => {
     })
 })
 
-main.get('/:index', isAuthenticated, (req, res) => {
+main.get('/:index', (req, res) => {
     Main.findById(req.params.index, (err, allMains) => {
     res.render("main/show.ejs", 
     {
