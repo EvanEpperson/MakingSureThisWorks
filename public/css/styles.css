@@ -1,5 +1,5 @@
 body{
-    
+
 }
 
 img{
@@ -12,7 +12,10 @@ img{
 .all{
     display: flex;
     flex-direction: row;
-    justify-items:space-between; ;
+    flex-wrap: wrap;
+    justify-items:space-between; 
+    width: auto;
+    height: auto;
 }
 
 .Matt, .Jerrica, .Brendan, .Leland{
