@@ -1,33 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <nav>
- <a href="/main" class="brand-logo left">Fruits</a>
-<ul class="right">
-  <li><a href="/main/new">Create a new Fruit</a></li>
-  <% if (currentUser){%>
-    <li>Welcome, <%= currentUser.username%></li>
-  
-  <li>
-    <form action="/sessions?_method=DELETE" method="post">
-      <input type="submit" value="Log Out" class="btn-small red">
-    </form>
-  </li>
-  <%} else {%>
-    <li><a href="/users/new">Sign Up</a> </li>
-    <li><a href="/sessions/new">Log In</a> </li>
-  <%}%>
-</ul>
 
-
-    </nav>
-    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Class Sylabus</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
 <!-- JavaScript Bundle with Popper -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="/css/styles.css">
+    
+    <nav>
+      <%- include ('../partials/nav.ejs') %> 
+    </nav>
+    
 </head>
 <body>
     <h1>Hello this is the index</h1>        
