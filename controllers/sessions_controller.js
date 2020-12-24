@@ -11,8 +11,6 @@ sessions.get('/new', (req, res) => {
 })
 
 sessions.post("/", (req, res) => {
-
-
   User.findOne({ username: req.body.username }, (err, foundUser) => {
     //Database error
     if (err) {

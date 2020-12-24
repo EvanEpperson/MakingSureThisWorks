@@ -18,7 +18,6 @@ main.get('/', (req, res) => {
              currentUser: req.session.currentUser
            });
     })
- 
 })
 
 main.get('/:index', isAuthenticated, (req, res) => {
@@ -29,7 +28,6 @@ main.get('/:index', isAuthenticated, (req, res) => {
       currentUser: req.session.currentUser
     });
     })
-
 })
 
 
@@ -81,7 +79,6 @@ main.get('/setup/seed', (req, res) => {
         res.redirect("/main");
       }
     );
-    
 })
 
 
