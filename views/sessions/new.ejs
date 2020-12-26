@@ -36,17 +36,6 @@
     <!-- Custom styles for this template -->
     <link href="/css/signin.css" rel="stylesheet">
 
-
-
-
-
-
-
-
-
-
-
-
     
   </head>
   <body class="text-center">
@@ -55,13 +44,19 @@
   <form action="/sessions" method="POST">
     <img class="mb-4" src="https://ga-core.s3.amazonaws.com/cms/files/files/000/000/886/original/ga-logo-gear.png" alt="" width="100" height="100">
     <h1 class="h3 mb-3 fw-normal">Please Sign In</h1>
+
     <label for="inputEmail" class="visually-hidden">Email address</label>
+
     <input type="text" name="username" id="inputEmail" class="form-control" placeholder="UserName" autocomplete="off" required autofocus>
+
     <label for="inputPassword" class="visually-hidden">Password</label>
+
     <input type="password" name="password" id="inputPassword" class="form-control" placeholder="Password" autocomplete="off" required>
+
+
     <div class="checkbox mb-3">
       <label>
-        <input type="checkbox" value="remember-me"> Remember me
+        <input class="checkbox" type="checkbox" value="remember-me" onclick="myFunction()">Show Password
       </label>
     </div>
     <a href="/users">
@@ -72,7 +67,18 @@
   </form>
 </main>
 
-
+<!-- code from w3schools for the show password  -->
+<!-- https://www.w3schools.com/howto/howto_js_toggle_password.asp -->
+<script>
+function myFunction() {
+  var x = document.getElementById("inputPassword");
+  if (x.type === "password") {
+    x.type = "text";
+  } else {
+    x.type = "password";
+  }
+}
+</script>
     
   </body>
 </html>

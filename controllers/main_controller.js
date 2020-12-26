@@ -11,7 +11,7 @@ const isAuthenticated = (req, res, next) => {
   }
 };
 
-main.get('/', (req, res) => {
+main.get('/',  (req, res) => {
     Main.find({}, (err, allMains) => {
            res.render("main/index.ejs", {
              data: allMains,
@@ -20,15 +20,14 @@ main.get('/', (req, res) => {
     })
 })
 
-main.get('/:index', (req, res) => {
-    Main.findById(req.params.index, (err, allMains) => {
-    res.render("main/show.ejs", 
-    {
+main.get("/:index",  (req, res) => {
+  Main.findById(req.params.index, (err, allMains) => {
+    res.render("main/show.ejs", {
       data: allMains,
-      currentUser: req.session.currentUser
+      currentUser: req.session.currentUser,
     });
-    })
-})
+  });
+});
 
 
 main.get('/setup/seed', (req, res) => {
