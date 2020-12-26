@@ -16,21 +16,7 @@
 <body>     
     <%- include ('../partials/mainboot.ejs') %> 
     <%- include ('../partials/mainboot2.ejs') %> 
-        <ul>
-            <div class="all">
-                <% for (let i = 0; i < data.length; i++){%>
-                
-                    <div class="<%=data[i].firstName%>">
-                        <h1><%= data[i].firstName %></h1> 
 
-                        <a href="/main/<%=data[i].id%>">
-                            <img src="<%=data[i].image%>" alt="not working">
-                        </a>
-
-                    </div>
-                <%}%>
-            </div>
-        </ul>
 
 
 
