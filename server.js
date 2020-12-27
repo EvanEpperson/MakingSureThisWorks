@@ -30,6 +30,7 @@ app.use(methodOverride("_method"));
 app.use(
   session({
     secret: process.env.SECRET,
+    cookie: {},
     resave: false,
     saveUninitialized: false,
   })

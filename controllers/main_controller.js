@@ -11,15 +11,7 @@ const isAuthenticated = (req, res, next) => {
   }
 };
 
-main.get('/students', isAuthenticated, (req, res, next) => {
-  Main.find({}, (err, allMains) => {
-    res.render('main/newstudents.ejs', 
-    {
-      data: allMains,
-      currentUser: req.session.currentUser
-    })
-  })
-})
+
 
 main.get('/',  (req, res) => {
     Main.find({}, (err, allMains) => {

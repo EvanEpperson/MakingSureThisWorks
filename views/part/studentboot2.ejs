@@ -1,0 +1,48 @@
+  <div class="album py-5 bg-light">
+    <div class="container">
+
+      <div class="row row-cols-1 row-cols-md-4 g-4">
+
+        <% for (let i = 0; i < data.length; i++){%>
+                     
+            <div class="col">
+                <div class="card shadow-sm">
+                    <img class="mainphotos" src="<%=data[i].image%>"/>
+                    <a href="/student/<%=data[i].id %> "></a>
+                    <div class="card-body">
+                    <p class="card-text"><%=data[i].firstName%> This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div class="btn-group">
+                          <a href="/student/<%= data[i].id %> ">
+                            <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                          </a>
+                          <% if(currentUser){%>
+                            <a href="https://calendar.google.com/calendar/u/1?cid=Z2F0ZXN0MDEwQGdtYWlsLmNvbQ">
+                          <button type="button" class="btn btn-sm btn-outline-secondary">Schedule</button>
+                          </a>
+                          <%} else {%> 
+                            <a href="/sessions/new">
+                              <button type="button" class="btn btn-sm btn-outline-secondary">Schedule</button>
+                            </a>
+
+                          <%}%>
+                        
+                        </div>
+                        
+                    </div>
+                    </div>
+                </div>
+            </div>
+        <%}%>   
+
+
+
+      </div>
+    </div>
+  </div>
+
+</main>
+
+    <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>  
+  </body>
+</html>
