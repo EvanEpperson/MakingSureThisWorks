@@ -12,7 +12,7 @@ const isAuthenticated = (req, res, next) => {
 
 
 
-student.get("/", isAuthenticated, (req, res, next) => {
+student.get("/", (req, res, next) => {
   Student.find({}, (err, allStudents) => {
     res.render("student/studentindex.ejs", {
       data: allStudents,

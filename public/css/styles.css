@@ -45,3 +45,9 @@ body{
     height: 225px;
     width: auto;
 }
+
+.mainimage{
+    width: 280px;
+    height: 490px;
+    border-radius: 2%;
+}
