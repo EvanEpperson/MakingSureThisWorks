@@ -106,3 +106,4 @@ dist
 
 #Admin folders
 .admin_controller.js
+.adminsessions_controller.js
