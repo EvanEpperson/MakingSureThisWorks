@@ -15,9 +15,11 @@ const isAuthenticated = (req, res, next) => {
 
 main.get('/',  (req, res) => {
     Main.find({}, (err, allMains) => {
-           res.render("main/index.ejs", {
+           res.render("main/index.ejs", 
+           {
              data: allMains,
-             currentUser: req.session.currentUser
+             currentUser: req.session.currentUser,
+             currentAdmin: req.session.currentAdmin
            });
     })
 })

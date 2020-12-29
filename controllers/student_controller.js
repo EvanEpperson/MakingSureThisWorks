@@ -10,6 +10,14 @@ const isAuthenticated = (req, res, next) => {
   }
 };
 
+const admin = (req, res, next) => {
+  if(req.session.currentAdmin){
+    return next();
+  }else{
+    res.redirect('/adminsessions/new')
+  }
+}
+
 student.put('/:id', (req, res) => {
   Student.findByIdAndUpdate(req.params.id, req.body, {new: true}, (error, foundStudent) => {
     res.redirect('/student')
@@ -27,11 +35,12 @@ student.get('/:id/edit', (req, res) => {
   })
 })
 
-student.get("/", (req, res, next) => {
+student.get("/", admin, (req, res, next) => {
   Student.find({}, (err, allStudents) => {
     res.render("student/studentindex.ejs", {
       data: allStudents,
-      currentUser: req.session.currentUser
+      currentUser: req.session.currentUser,
+      currentAdmin: req.session.currentAdmin
     });
   });
 });
