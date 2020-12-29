@@ -15,12 +15,20 @@ const admin = (req, res, next) => {
     return next();
   }else{
     res.redirect('/adminsessions/new')
+    // put it to a new folder to fill out for admins to edit things around 
   }
 }
 
-student.put('/:id', (req, res) => {
+student.put('/:id', admin, (req, res) => {
   Student.findByIdAndUpdate(req.params.id, req.body, {new: true}, (error, foundStudent) => {
     res.redirect('/student')
+  })
+})
+
+student.get('/editrequestform', (req, res) => {
+  res.render('/student/studentContact', 
+  {
+    currentAdmin: req.session.currentAdmin
   })
 })
 
@@ -50,7 +58,8 @@ student.get('/:index', (req, res) => {
     Student.findById(req.params.index, (err, allStudents) => {
         res.render('student/studentshow.ejs', {
             data: allStudents,
-            currentUser: req.session.currentUser
+            currentUser: req.session.currentUser,
+            currentAdmin: req.session.currentAdmin
         })
     })
 })

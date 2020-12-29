@@ -37,14 +37,22 @@
         <form action="/student">
             <button type="submit" class="btn btn-primary">Find Another Student Teacher </button>
         </form>
-        
+        <% if (currentAdmin) {%>
         <a href="/student/<%=data._id%>/edit">
         <button class="btn btn-primary">Edit</button>
         </a>
-        
+        <% }else{ %> 
+            <a href="/student/editrequestform">
+                <button class="btn btn-primary" >Edit</button>
+
+
+
+            </a>
+        <% } %> 
 
             
         </form>
+        <a href="mailto:gatest1010@gmail.com?subject=Testing out mailto!">First Example</a>
         
 
         

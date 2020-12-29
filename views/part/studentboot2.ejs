@@ -18,12 +18,14 @@
                           <a href="/student/<%= data[i].id %> ">
                             <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
                           </a>
-                          <% if(currentAdmin){%>
+                          <% if(currentUser){%>
                             <a href="https://calendar.google.com/calendar/u/1?cid=Z2F0ZXN0MDEwQGdtYWlsLmNvbQ">
                           <button type="button" class="btn btn-sm btn-outline-secondary">Schedule</button>
                           </a>
                           <%} else {%> 
-                           
+                                      <a href="/sessions/new">
+                              <button type="button" class="btn btn-sm btn-outline-secondary">Schedule</button>
+                            </a>
 
                           <%}%>
 
