@@ -51,8 +51,12 @@ const userController = require("./controllers/users_controllers.js")
 app.use('/users', userController)
 const sessionsController = require("./controllers/sessions_controller.js");
 app.use('/sessions', sessionsController)
-const studentController = require("./controllers/student_controller")
+const studentController = require("./controllers/student_controller.js")
 app.use('/student', studentController)
+const adminController = require("./controllers/admin_controller.js")
+app.use('/admin', adminController)
+const adminsessionsController = require("./controllers/adminsessions_controller.js")
+app.use('/adminsessions', adminsessionsController)
 
 
 ///////////////////////////////////////////////////////////////////
@@ -60,7 +64,11 @@ app.get('/', (req, res) => {
     res.redirect('/main')
 })
 
-
+app.get('/testing/admin', (req, res) => {
+  res.redirect(
+    "https://account.mongodb.com/account/login?n=%2Fv2%2F5fe20b3ef1acbf50288c661c&nextHash=%23clusters"
+  );
+})
 ////////////////////////////////////////////////////////////////////
 //Listener
 ////////////////////////////////////////////////////////////////////
