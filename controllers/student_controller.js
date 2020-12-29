@@ -10,7 +10,21 @@ const isAuthenticated = (req, res, next) => {
   }
 };
 
+student.put('/:id', (req, res) => {
+  Student.findByIdAndUpdate(req.params.id, req.body, {new: true}, (error, foundStudent) => {
+    res.redirect('/student')
+  })
+})
 
+student.get('/:id/edit', (req, res) => {
+  Student.findById(req.params.id, (error, foundStudent) => {
+    res.render('student/studentedit.ejs', 
+    { 
+      data: foundStudent,
+      currentUser: req.session.currentUser,
+    })
+  })
+})
 
 student.get("/", (req, res, next) => {
   Student.find({}, (err, allStudents) => {
