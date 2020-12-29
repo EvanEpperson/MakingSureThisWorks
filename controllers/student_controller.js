@@ -22,6 +22,7 @@ student.get('/:id/edit', (req, res) => {
     { 
       data: foundStudent,
       currentUser: req.session.currentUser,
+
     })
   })
 })
