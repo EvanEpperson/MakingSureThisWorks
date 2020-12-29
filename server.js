@@ -53,9 +53,9 @@ const sessionsController = require("./controllers/sessions_controller.js");
 app.use('/sessions', sessionsController)
 const studentController = require("./controllers/student_controller.js")
 app.use('/student', studentController)
-const adminController = require("./controllers/.admin_controller.js")
+const adminController = require("./controllers/admin_controller.js")
 app.use('/admin', adminController)
-const adminsessionsController = require("./controllers/.admins_controller.js")
+const adminsessionsController = require("./controllers/admins_controller.js")
 app.use('/adminsessions', adminsessionsController)
 
 
