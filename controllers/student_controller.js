@@ -24,18 +24,18 @@ student.put('/:id', (req, res) => {
   })
 })
 
-student.get('/:id/edit', (req, res) => {
+student.get('/:id/edit', admin, (req, res) => {
   Student.findById(req.params.id, (error, foundStudent) => {
     res.render('student/studentedit.ejs', 
     { 
       data: foundStudent,
       currentUser: req.session.currentUser,
-
+      currentAdmin: req.session.currentAdmin
     })
   })
 })
 
-student.get("/", admin, (req, res, next) => {
+student.get("/", (req, res, next) => {
   Student.find({}, (err, allStudents) => {
     res.render("student/studentindex.ejs", {
       data: allStudents,

@@ -33,14 +33,34 @@
         <li><a class="link-secondary" href="#">Gaming</a></li>
       </ul>
     </div>
+
+
+
+    <% if (currentAdmin){ %> 
     <div class="col-6 col-md">
-      <h5>About</h5>
+      <h5>Welcome Sir How May I Assist You Today </h5>
       <ul class="list-unstyled text-small">
-        <li><a class="link-secondary" href="#">Team</a></li>
-        <li><a class="link-secondary" href="#">Locations</a></li>
-        <li><a class="link-secondary" href="#">Privacy</a></li>
-        <li><a class="link-secondary" href="/admin">Terms</a></li>
+        <li>
+            <form action="/sessions?_method=DELETE" method="post">
+              <input type="submit" value="Log Out" class="btn btn-danger">
+            </form>
+        </li>
+        <li><a class="link-secondary" href="#">Students</a></li>
+        <li><a class="link-secondary" href="#">Hopefullysomething cool</a></li>
+        <li><a class="link-secondary" href="#">GCal</a></li>
+        <li><a class="link-secondary" href="/testing/admin">ATLAS</a></li>
       </ul>
     </div>
+    <% }else{ %>
+    <div class="col-6 col-md">
+      <h5>A Trick</h5>
+      <ul class="list-unstyled text-small">
+        <li><a class="link-secondary" href="#">Business</a></li>
+        <li><a class="link-secondary" href="#">Education</a></li>
+        <li><a class="link-secondary" href="#">Government</a></li>
+        <li><a class="link-secondary" href="#">Gaming</a></li>
+      </ul>
+    </div>        
+    <%} %> 
   </div>
 </footer>
