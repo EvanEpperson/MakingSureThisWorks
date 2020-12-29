@@ -105,5 +105,5 @@ dist
 
 
 #Admin folders
-adminsessions_controller.js
-admin_controller.js
+$adminsessions_controller.js
+$admin_controller.js
