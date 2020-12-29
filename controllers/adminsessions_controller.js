@@ -18,12 +18,7 @@ adminsession.post("/", (req, res) => {
       res.send('<a  href="/">Please Create A New Account </a>');
     } else {
 
-      if (
-        bcrypt.compareSync(req.body.username, foundAdmin.username),(
-          req.body.password,
-          foundAdmin.password
-        )
-      ) {
+      if (bcrypt.compareSync(req.body.password, foundAdmin.password)) {
         req.session.currentAdmin = foundAdmin;
         res.redirect("/");
       } else {
