@@ -26,7 +26,7 @@ student.put('/:id', admin, (req, res) => {
 })
 
 student.get('/editrequestform', (req, res) => {
-  res.render('/student/studentContact', 
+  res.render('student/studentContact.ejs', 
   {
     currentAdmin: req.session.currentAdmin
   })
