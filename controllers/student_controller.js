@@ -79,6 +79,10 @@ student.get("/setup/seed", (req, res) => {
         time: "West Coast",
         image:
           "https://media-exp1.licdn.com/dms/image/C5603AQErZ1mG03VOuA/profile-displayphoto-shrink_800_800/0/1607619551717?e=1614816000&v=beta&t=Ds35diTR9tELCR4egU3xZD00QKuOZKMdhrNjpCZnhE4",
+        imagea:
+          "https://miro.medium.com/max/2560/1*v0VfsQyWTJ-5eOo5kcjfLg@2x.jpeg",
+        imageb:
+          "https://nypost.com/wp-content/uploads/sites/2/2019/01/cali-state-park.jpg?quality=80&strip=all",
       },
       {
         firstName: "AJ",
@@ -89,6 +93,10 @@ student.get("/setup/seed", (req, res) => {
         time: "East Coast",
         image:
           "https://media-exp1.licdn.com/dms/image/C5103AQGfVPKYLl3uTw/profile-displayphoto-shrink_800_800/0/1516353900370?e=1614816000&v=beta&t=ElC4bhCKOp74KVKgqEUPVrmHOHhXXpVOEIZfC-oYk5Q",
+        imagea:
+          "https://upload.wikimedia.org/wikipedia/commons/9/9f/Vimlogo.svg",
+        imageb:
+          "https://www.jeremymorgan.com/images/pop-os-linux/pop-os-linux-og.jpg",
       },
       {
         firstName: "Anthony",
@@ -99,6 +107,10 @@ student.get("/setup/seed", (req, res) => {
         time: "east Coast",
         image:
           "https://media-exp1.licdn.com/dms/image/C5603AQHNoePwicZHUQ/profile-displayphoto-shrink_800_800/0/1607029530909?e=1614816000&v=beta&t=yMzTg39Qt_vni0gEPlqT38Jg0fKtw32txmOhu4LYQCg",
+        imagea:
+          "https://i.pinimg.com/originals/24/0b/bb/240bbb8b6e90cb1a0ac5165c2dd6fc27.jpg",
+        imageb:
+          "https://media.tenor.com/images/6e7c95cea52bcc146ac671742c8f1ad5/tenor.gif",
       },
       {
         firstName: "Malik",

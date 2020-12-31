@@ -1,75 +1,131 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <nav>
-        <%- include('../partials/nav.ejs') %> 
+        <%#- include('../partials/nav.ejs') %> 
     </nav>
-        <%- include('../partials/css.ejs') %> 
+        <%#- include('../partials/css.ejs') %> 
 </head>
 <body>
     <h1>SHOW PAGE</h1>
     <div class="showPage">
         <div class="name">
-            <%=data.firstName%>
-            <%=data.lastName%>
+            <%#=data.firstName%>
+            <%#=data.lastName%>
         </div>
         <div class="special">
-            <%=data.specializations%>
+            <%#=data.specializations%>
         </div>
         <div class="phone">
-            <%=data.phone%>
+            <%#=data.phone%>
         </div>
         <div class="email">
-            <%=data.email%>
+            <%#=data.email%>
         </div>
         <div class="time">
-            <%=data.time%>
+            <%#=data.time%>
             <p>Local Time: <span id="datetime"></span></p>
             
         </div>       
         
-        <img src="<%= data.image %> " alt="Image Not Found">
+        <img src="<%#= data.image %> " alt="Image Not Found">
     </div>
 
         <form action="/student">
             <button type="submit" class="btn btn-primary">Find Another Student Teacher </button>
         </form>
-        <% if (currentAdmin) {%>
-        <a href="/student/<%=data._id%>/edit">
+        <%# if (currentAdmin) {%>
+        <a href="/student/<%#=data._id%>/edit">
         <button class="btn btn-primary">Edit</button>
         </a>
-        <% }else{ %> 
+        <%# }else{ %> 
             <a href="/student/editrequestform">
                 <button class="btn btn-primary" >Edit</button>
 
 
 
             </a>
-        <% } %> 
+        <%# } %> 
 
             
         </form>
         <!-- works for the new page thinking aobut making this one a page for the new form and then the email submission button -->
-            <a href="/student/editrequestform">
+            <!-- <a href="/student/editrequestform">
                 <button class="btn btn-primary">test
                 </button>
             </a>
- 
+  -->
         <!-- works for email brings up the email and everything but i want it to send it straight from the form not bring up a new email  -->
-        <a href="mailto:gatest1010@gmail.com?subject=Testing out mailto!">First Example</a>
+        <!-- <a href="mailto:gatest1010@gmail.com?subject=Testing out mailto!">First Example</a> -->
         
 
         
 
-
+<!-- 
             <script>
                 var dt = new Date();
                     document.getElementById("datetime").innerHTML = dt.toLocaleTimeString();
-            </script>
+            </script> -->
 <!-- got the time from this website https://www.arclab.com/en/kb/htmlcss/display-date-time-javascript-php-ssi.html#:~:text=First%20we%20need%20to%20define,%3E%20or%20element.&text=Now%20let's%20assign%20the%20date,the%20id%3D%22datetime%22. -->
     
+<!-- </body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+      <link href="https://fonts.googleapis.com/css?family=Bentham|Playfair+Display|Raleway:400,500|Suranna|Trocchi" rel="stylesheet">
+    <link rel="stylesheet" href="/css/teststyle.css">
+</head>
+<body>
+<div class="cards">
+  <div class="card content">
+    <div class="card-content">
+      <div class="card-img">
+        <img src="<%=data.image%>">
+      </div>
+      <div class="card-label">E-Sports</div>
+      <div class="card-title">
+        Fnatic raises $19 million, shakes up leadership team
+      </div>
+    </div>
+  </div>
+  <div class="card content">
+    <div class="card-content">
+      <div class="card-img">
+        <img src="<%=data.imagea%>" alt="keyboard">
+      </div>
+      <div class="card-label">
+        Technology
+      </div>
+      <div class="card-title">
+        Google Stadia: The Future of Gaming
+      </div>
+    </div>
+  </div>
+  <div class="card content">
+    <div class="card-content">
+      <div class="card-img">
+        <img src="<%=data.imageb%>">
+      </div>
+      <div class="card-label">
+        Consoles
+      </div>
+      <div class="card-title">
+        PS5 won't launch before mid-2020
+      </div>
+    </div>
+  </div>
+  <div class="card form">
+    <div class="form-title">Sign Up</div>
+  </div>
+</div>
 </body>
 </html>
+

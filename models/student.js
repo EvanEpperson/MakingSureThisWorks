@@ -8,6 +8,8 @@ const studentSchema = new mongoose.Schema({
     email: String,                
     time: String, 
     image: String, 
+    imagea: String,
+    imageb: String,
 })
 
 const Student = mongoose.model('Student', studentSchema)
