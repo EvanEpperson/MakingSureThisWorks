@@ -73,7 +73,8 @@ student.get("/setup/seed", (req, res) => {
       {
         firstName: "Banu",
         lastName: "Tryon",
-        specializations: "Made the World Beatufiul with CSS, Then Commented it Out",
+        specializations:
+          "Made the World Beatufiul with CSS, Then Commented it Out",
         phone: "225",
         email: "nothing yet",
         time: "West Coast",
@@ -86,7 +87,8 @@ student.get("/setup/seed", (req, res) => {
       {
         firstName: "AJ",
         lastName: "Good Luck",
-        specializations: "Created Linux, then let Linus Torvalds take the credit",
+        specializations:
+          "Created Linux, then let Linus Torvalds take the credit",
         phone: "224",
         email: "nothing yet ",
         time: "East Coast",
@@ -120,7 +122,8 @@ student.get("/setup/seed", (req, res) => {
         time: "West Coast",
         image:
           "https://media-exp1.licdn.com/dms/image/C5603AQFCBwYW9QawVA/profile-displayphoto-shrink_800_800/0/1606690666214?e=1614816000&v=beta&t=YdOyA8Odc9TvuSYqBy250rur-jOc50WSWqAHTK2BjXM",
-        imagea: "https://cdn.mos.cms.futurecdn.net/EzgdmaCQuT84bgDL4fhXZS.jpg",
+        imagea:
+          "https://www.tvovermind.com/wp-content/uploads/2017/01/UndercoverBoss.jpg",
         imageb:
           "https://i.pinimg.com/originals/78/b9/cc/78b9cc43706c49fadf85fee50243ed47.gif",
       },

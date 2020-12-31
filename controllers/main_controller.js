@@ -29,6 +29,7 @@ main.get("/:index",  (req, res) => {
     res.render("main/show.ejs", {
       data: allMains,
       currentUser: req.session.currentUser,
+      currentAdmin: req.session.currentAdmin
     });
   });
 });

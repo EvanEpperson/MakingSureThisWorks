@@ -38,13 +38,17 @@
             Explore More Options
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <!-- changed to current admin for testing for now i still want it to be only user -->
+            <!-- made it admin or user so i dont have to be logged in on both to access everything -->
             <% if (currentUser){%>
             <li><a class="dropdown-item" href="/student/">Learn About More Student Teachers</a></li>
-            <%} else {%>
+            <%} else if (currentAdmin) {%>
+            <li><a class="dropdown-item" href="/student/">Learn About More Student Teachers</a></li>
+
+              <%}else {%>
               <li><a class="dropdown-item" href="/sessions/new">Learn About More Student Teachers</a></li>
-              
+
               <%}%>
+              
             <li><a class="dropdown-item" href="https://generalassemb.ly/">Learn About GA</a></li>
             <li><hr class="dropdown-divider"></li>
             <li><a class="dropdown-item" href="#">Contact Admins About Becoming A Teacher</a></li>
