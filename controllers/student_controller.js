@@ -73,7 +73,7 @@ student.get("/setup/seed", (req, res) => {
       {
         firstName: "Banu",
         lastName: "Tryon",
-        specializations: "CSS BadAss",
+        specializations: "Made the World Beatufiul with CSS, Then Commented it Out",
         phone: "225",
         email: "nothing yet",
         time: "West Coast",
@@ -86,7 +86,7 @@ student.get("/setup/seed", (req, res) => {
       {
         firstName: "AJ",
         lastName: "Good Luck",
-        specializations: "Super Back end , Linux ",
+        specializations: "Created Linux, then let Linus Torvalds take the credit",
         phone: "224",
         email: "nothing yet ",
         time: "East Coast",
@@ -114,7 +114,7 @@ student.get("/setup/seed", (req, res) => {
       {
         firstName: "Malik",
         lastName: "Ajose",
-        specializations: "The CEO",
+        specializations: "The CEO, Your not fooling anyone",
         phone: "222",
         email: "nothing yet",
         time: "West Coast",
@@ -127,7 +127,7 @@ student.get("/setup/seed", (req, res) => {
       {
         firstName: "Hunter",
         lastName: "Wallen",
-        specializations: "Master of all things JS",
+        specializations: "Master of all things JS, Has All of the Coffee ",
         phone: "222",
         email: "nothing yet",
         time: "East Coast",

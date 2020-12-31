@@ -35,20 +35,20 @@
     </div>
 
         <form action="/student">
-            <button type="submit" class="btn btn-primary">Find Another Student Teacher </button>
+            <button type="submit" class="btn btn-primary">Find Another Student Teacher </button> -->
         </form>
-        <%# if (currentAdmin) {%>
-        <a href="/student/<%#=data._id%>/edit">
-        <button class="btn btn-primary">Edit</button>
+        <%if (currentAdmin) {%>
+        <a href="/student/<%=data._id%>/edit">
+        <button class="btn btn-primary">Editing</button>
         </a>
-        <%# }else{ %> 
+        <%}else{ %> 
             <a href="/student/editrequestform">
                 <button class="btn btn-primary" >Edit</button>
 
 
 
             </a>
-        <%# } %> 
+        <%} %> 
 
             
         </form>
@@ -57,7 +57,7 @@
                 <button class="btn btn-primary">test
                 </button>
             </a>
-  -->
+ 
         <!-- works for email brings up the email and everything but i want it to send it straight from the form not bring up a new email  -->
         <!-- <a href="mailto:gatest1010@gmail.com?subject=Testing out mailto!">First Example</a> -->
         
