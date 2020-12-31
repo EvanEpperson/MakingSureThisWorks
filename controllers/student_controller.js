@@ -81,8 +81,7 @@ student.get("/setup/seed", (req, res) => {
           "https://media-exp1.licdn.com/dms/image/C5603AQErZ1mG03VOuA/profile-displayphoto-shrink_800_800/0/1607619551717?e=1614816000&v=beta&t=Ds35diTR9tELCR4egU3xZD00QKuOZKMdhrNjpCZnhE4",
         imagea:
           "https://miro.medium.com/max/2560/1*v0VfsQyWTJ-5eOo5kcjfLg@2x.jpeg",
-        imageb:
-          "https://nypost.com/wp-content/uploads/sites/2/2019/01/cali-state-park.jpg?quality=80&strip=all",
+        imageb: "https://media0.giphy.com/media/XZYR46vpHwqvYdjVMm/giphy.gif",
       },
       {
         firstName: "AJ",
@@ -96,12 +95,12 @@ student.get("/setup/seed", (req, res) => {
         imagea:
           "https://upload.wikimedia.org/wikipedia/commons/9/9f/Vimlogo.svg",
         imageb:
-          "https://www.jeremymorgan.com/images/pop-os-linux/pop-os-linux-og.jpg",
+          "https://steamuserimages-a.akamaihd.net/ugc/518259462797828234/08E759FF7914A201100BA0A31FC4940022D09EE5/",
       },
       {
         firstName: "Anthony",
         lastName: "Ku",
-        specializations: "Monster",
+        specializations: "All Around Monster, Literal God Among Meir Mortals",
         phone: "223",
         email: "nothing yet",
         time: "east Coast",
@@ -121,6 +120,9 @@ student.get("/setup/seed", (req, res) => {
         time: "West Coast",
         image:
           "https://media-exp1.licdn.com/dms/image/C5603AQFCBwYW9QawVA/profile-displayphoto-shrink_800_800/0/1606690666214?e=1614816000&v=beta&t=YdOyA8Odc9TvuSYqBy250rur-jOc50WSWqAHTK2BjXM",
+        imagea: "https://cdn.mos.cms.futurecdn.net/EzgdmaCQuT84bgDL4fhXZS.jpg",
+        imageb:
+          "https://i.pinimg.com/originals/78/b9/cc/78b9cc43706c49fadf85fee50243ed47.gif",
       },
       {
         firstName: "Hunter",
@@ -131,6 +133,8 @@ student.get("/setup/seed", (req, res) => {
         time: "East Coast",
         image:
           "https://media-exp1.licdn.com/dms/image/C5603AQGbZY3OCY0lKQ/profile-displayphoto-shrink_800_800/0/1607033788620?e=1614816000&v=beta&t=f4JO0qLiEPrg-ikeLgCmTxVwtlTnWpBi9kF5rtIk3OY",
+        imagea: "https://cdn.mos.cms.futurecdn.net/EzgdmaCQuT84bgDL4fhXZS.jpg",
+        imageb: "https://media1.giphy.com/media/TI32JwHmWQEi4/giphy.gif",
       },
     ],
     (err, data) => {
