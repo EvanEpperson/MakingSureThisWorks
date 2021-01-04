@@ -19,6 +19,12 @@ const admin = (req, res, next) => {
   }
 }
 
+student.delete('/:id', (req, res) => {
+  Student.findByIdAndRemove(req.params.id, (error, deletedstudent) => {
+    res.redirect('/student')
+  })
+})
+
 student.put('/:id', admin, (req, res) => {
   Student.findByIdAndUpdate(req.params.id, req.body, {new: true}, (error, foundStudent) => {
     res.redirect('/student')

@@ -1,14 +1,16 @@
 const mongoose = require('mongoose')
 
 const mainSchema = new mongoose.Schema({
-    firstName: {type: String, required: true},
-    lastName: {type: String, required: true},
-    specializations: {type: String, required: true},
-    phone: String, 
-    email: String,
-    time: String, 
-    image: String,
-})
+  firstName: { type: String, required: true },
+  lastName: { type: String, required: true },
+  specializations: { type: String, required: true },
+  phone: String,
+  email: String,
+  time: String,
+  image: String,
+  imagea: String,
+  imageb: String,
+});
 
 const Main = mongoose.model('Main', mainSchema)
 

@@ -81,7 +81,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
       <link href="https://fonts.googleapis.com/css?family=Bentham|Playfair+Display|Raleway:400,500|Suranna|Trocchi" rel="stylesheet">
-    <link rel="stylesheet" href="/css/teststyle.css">
+    <link rel="stylesheet" href="/css/showstyles.css">
 </head>
 <body>
 <div class="cards">
@@ -125,6 +125,15 @@
   </div>
 
 </div>
+
+<% if (currentAdmin) {%> 
+
+<form action="/student/<%=data._id%>?_method=DELETE" method="POST">
+  <input type="submit" value="DELETE">
+<% }else{ %> 
+
+<% } %> 
+</form>
 </body>
 </html>
 
