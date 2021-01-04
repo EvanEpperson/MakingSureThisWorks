@@ -80,6 +80,7 @@ student.get("/setup/seed", (req, res) => {
         time: "West Coast",
         image:
           "https://media-exp1.licdn.com/dms/image/C5603AQErZ1mG03VOuA/profile-displayphoto-shrink_800_800/0/1607619551717?e=1614816000&v=beta&t=Ds35diTR9tELCR4egU3xZD00QKuOZKMdhrNjpCZnhE4",
+        imageupload: " ",
         imagea:
           "https://miro.medium.com/max/2560/1*v0VfsQyWTJ-5eOo5kcjfLg@2x.jpeg",
         imageb: "https://media0.giphy.com/media/XZYR46vpHwqvYdjVMm/giphy.gif",

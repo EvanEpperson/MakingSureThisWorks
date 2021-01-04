@@ -7,7 +7,8 @@ const studentSchema = new mongoose.Schema({
     phone: String,
     email: String,                
     time: String, 
-    image: String, 
+    image: String,
+    imageupload: {data: Buffer, contentType: String},
     imagea: String,
     imageb: String,
 })
