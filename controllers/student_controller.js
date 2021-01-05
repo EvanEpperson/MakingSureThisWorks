@@ -58,7 +58,7 @@ student.get('/:id/edit', admin, (req, res) => {
   })
 })
 
-student.get("/", (req, res, next) => {
+student.get("/", isAuthenticated, (req, res, next) => {
   Student.find({}, (err, allStudents) => {
     res.render("student/studentindex.ejs", {
       data: allStudents,
