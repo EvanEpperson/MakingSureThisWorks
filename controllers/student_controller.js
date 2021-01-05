@@ -105,7 +105,7 @@ student.get("/setup/seed", (req, res) => {
         imagea:
           "https://miro.medium.com/max/2560/1*v0VfsQyWTJ-5eOo5kcjfLg@2x.jpeg",
         imageb: "https://media0.giphy.com/media/XZYR46vpHwqvYdjVMm/giphy.gif",
-        linkedin: "https://www.linkedin.com/in/ajigh/",
+        linkedin: "https://www.linkedin.com/in/tryon-experiences"
       },
       {
         firstName: "AJ",
