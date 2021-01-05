@@ -119,8 +119,9 @@ body * {
   }
 
   .form-title {
-  font-size: 2vw !important;
+  font-size: 5vw !important;
   font-weight: 900;
+  padding-right: 10px;
   }
 }
 
