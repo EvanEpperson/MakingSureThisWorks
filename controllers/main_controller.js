@@ -12,6 +12,11 @@ const isAuthenticated = (req, res, next) => {
 };
 
 
+main.delete("/:id", (req, res) => {
+  Main.findByIdAndRemove(req.params.id, (error, deletedTeacher) => {
+    res.redirect("/main");
+  });
+});
 
 main.get('/',  (req, res) => {
     Main.find({}, (err, allMains) => {
@@ -41,7 +46,7 @@ main.get('/setup/seed', (req, res) => {
         {
           firstName: "Matt",
           lastName: "Huntington",
-          specializations: "badass",
+          specializations: "Coded the World in 6 days and on the 7th he rested. ",
           phone: "225",
           email: "nothing yet",
           time: "east coast",
@@ -55,7 +60,7 @@ main.get('/setup/seed', (req, res) => {
         {
           firstName: "Jerrica ",
           lastName: "Bobadilla",
-          specializations: "css",
+          specializations: "Created Bootstrap and then stopped using it. ",
           phone: "224",
           email: "nothing yet ",
           time: "west coast",
@@ -68,7 +73,7 @@ main.get('/setup/seed', (req, res) => {
         {
           firstName: "Brendan ",
           lastName: "Quirk",
-          specializations: "js",
+          specializations: "Thomas the Train has nothing on Brendan when coding on Rails",
           phone: "223",
           email: "nothing yet",
           time: "east Coast",
@@ -81,7 +86,7 @@ main.get('/setup/seed', (req, res) => {
         {
           firstName: "Leland ",
           lastName: "Shirley",
-          specializations: "teaching fast",
+          specializations: "Can code faster than Jordan Walke at React while coding in Vanilla JavaScript.",
           phone: "222",
           email: "nothing yet",
           time: "West Coast",

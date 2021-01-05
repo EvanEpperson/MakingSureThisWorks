@@ -11,6 +11,7 @@ const studentSchema = new mongoose.Schema({
     imageupload: {data: Buffer, contentType: String},
     imagea: String,
     imageb: String,
+    linkedin: String,
 })
 
 const Student = mongoose.model('Student', studentSchema)

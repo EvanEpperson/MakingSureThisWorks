@@ -7,7 +7,7 @@
     <nav>
         <%#- include('../partials/nav.ejs') %> 
     </nav>
-        <%#- include('../partials/css.ejs') %> 
+         
 </head>
 <body>
     <h1>SHOW PAGE</h1>
@@ -37,18 +37,7 @@
         <form action="/student">
             <button type="submit" class="btn btn-primary">Find Another Student Teacher </button> -->
         </form>
-        <%if (currentAdmin) {%>
-        <a href="/student/<%=data._id%>/edit">
-        <button class="btn btn-primary">Editing</button>
-        </a>
-        <%}else{ %> 
-            <a href="/student/editrequestform">
-                <button class="btn btn-primary" >Edit</button>
 
-
-
-            </a>
-        <%} %> 
 
             
         </form>
@@ -80,6 +69,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <%- include('../partials/css.ejs') %>
       <link href="https://fonts.googleapis.com/css?family=Bentham|Playfair+Display|Raleway:400,500|Suranna|Trocchi" rel="stylesheet">
     <link rel="stylesheet" href="/css/showstyles.css">
 </head>
@@ -97,15 +87,18 @@
     </div>
   </div>
   <div class="card content">
+
     <div class="card-content">
+      <a href="<%=data.linkedin%>">
       <div class="card-img">
         <img src="<%=data.imagea%>" alt="keyboard">
       </div>
       <div class="card-label">
-        Technology
+        linkedin
       </div>
       <div class="card-title">
       </div>
+      </a>
     </div>
   </div>
   <div class="card content">
@@ -113,16 +106,32 @@
       <div class="card-img">
         <img src="<%=data.imageb%>">
       </div>
-      <div class="card-label">
+      <!-- <div class="card-label">
         Consoles
-      </div>
+      </div> -->
       <div class="card-title">
       </div>
     </div>
   </div>
   <div class="card form">
-    <div class="form-title">Sign Up</div>
+    <a href="https://calendar.google.com/calendar/u/1?cid=Z2F0ZXN0MDEwQGdtYWlsLmNvbQ">
+    <div class="form-title">
+      Schedule Now
+      </div>      
+    </a>
   </div>
+          <%if (currentAdmin) {%>
+        <a href="/student/<%=data._id%>/edit">
+        <button class="btn btn-primary">Editing</button>
+        </a>
+        <%}else{ %> 
+            <a href="/student/editrequestform">
+                <button class="btn btn-outline-primary" >Request Edit Page</button>
+            </a>
+            <a href="">
+              <button class="btn btn-outline-warning">Back to Students </button>
+            </a>
+        <%} %> 
 
 </div>
 

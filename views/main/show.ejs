@@ -5,10 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+
       <link href="https://fonts.googleapis.com/css?family=Bentham|Playfair+Display|Raleway:400,500|Suranna|Trocchi" rel="stylesheet">
     <link rel="stylesheet" href="/css/showstyles.css">
 </head>
 <body>
+  
 <div class="cards">
   <div class="card content">
     <div class="card-content">
@@ -26,9 +29,9 @@
       <div class="card-img">
         <img src="<%=data.imagea%>" alt="keyboard">
       </div>
-      <div class="card-label">
+      <!-- <div class="card-label">
         Technology
-      </div>
+      </div> -->
       <div class="card-title">
       </div>
     </div>
@@ -38,22 +41,34 @@
       <div class="card-img">
         <img src="<%=data.imageb%>">
       </div>
-      <div class="card-label">
+      <!-- <div class="card-label">
         Consoles
-      </div>
+      </div> -->
       <div class="card-title">
       </div>
     </div>
   </div>
   <div class="card form">
-    <div class="form-title">Sign Up</div>
+    <a href="https://calendar.google.com/calendar/u/1?cid=Z2F0ZXN0MDEwQGdtYWlsLmNvbQ">
+    <div class="form-title">
+      Schedule Now
+      </div>      
+    </a>
+    <div class="form-title">
+      
+      </div>
   </div>
-
+<div>
+  <a href="/main">
+    <button class="btn btn-outline-warning">Back to Teachers</button>
+  </a>
 </div>
+</div>
+
 
 <% if (currentAdmin) {%> 
 
-<form action="/student/<%=data._id%>?_method=DELETE" method="POST">
+<form action="/main/<%=data._id%>?_method=DELETE" method="POST">
   <input type="submit" value="DELETE">
 <% }else{ %> 
 
