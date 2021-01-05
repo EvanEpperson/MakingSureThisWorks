@@ -92,6 +92,38 @@ body * {
   color: white;
   padding: 0.5em;
 }
+
+@media screen and (max-width: 500px){
+  .cards {
+  width: calc(100% - 2em);
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-gap: 1em;
+  grid-template-areas: "a a b c" "a a d d";
+  width: 100%;
+}
+
+
+  .card-label{
+      position: absolute;
+  top: 0.45rem;
+  left: 0.45rem;
+  background: #089f8a;
+  text-transform: uppercase;
+  font-weight: 300;
+  font-size: 0.7em;
+  color: blue;
+  padding: 0.5em;
+
+  }
+
+  .form-title {
+  font-size: 2vw !important;
+  font-weight: 900;
+  }
+}
+
 .card-title {
   position: absolute;
   left: 1em;
