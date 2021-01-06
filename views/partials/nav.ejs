@@ -42,16 +42,16 @@
 
 
             <!-- made it admin or user so i dont have to be logged in on both to access everything -->
-            <!-- <#% if (currentUser){%> -->
+            <% if (currentUser){%>
             <li><a class="dropdown-item" href="/student/">Learn About More Student Teachers</a></li>
 
-            <!-- <#%} else if (currentAdmin) {%> -->
+            <%} else if (currentAdmin) {%>
             <li><a class="dropdown-item" href="/student/">Learn About More Student Teachers</a></li>
 
-              <!-- <#%}else {%> -->
+              <%}else {%>
               <li><a class="dropdown-item" href="/users/new" >Learn About More Student Teachers</a></li>
                 
-              <!-- <#%}%> -->
+              <%}%>
                  <!-- end of else -->
                 <!-- window.location.pathname = "/student" -->
 

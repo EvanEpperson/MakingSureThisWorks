@@ -1,30 +1,7 @@
-<!-- <!DOCTYPE html>
-<html lang="en">
-<head>
-
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     
-    <#%- include ('../partials/css.ejs') %> 
-    <nav>
-      <#%- include ('../partials/nav.ejs') %> 
-    </nav>
     
-</head>
-<body>     
-    <#%- include ('../partials/mainboot.ejs') %> 
-    <#%- include ('../partials/mainboot2.ejs') %> 
 
-
-    <footer>
-      <#%- include ('../partials/footerboot.ejs') %> 
-    </footer>
-
-
-
-</body>
-</html> -->
 
 <!DOCTYPE html>
 <html lang="en">
@@ -37,7 +14,7 @@
 </head>
 <body>
     <%- include ('../partials/css.ejs') %> 
-    <h1>Welcome to EppCo Where We Making Teaching Easy </h1>
+    <%- include ('../partials/mainboot.ejs') %> 
 
 </section>
 <section class="cards-wrapper">
@@ -55,13 +32,8 @@
         </div> -->
       </div>
     </a>
-   <% if (currentUser) { %>
-      <a href="https://eppco.youcanbook.me/" data-ycbm-modal="true" target="_blank"><img src="https://youcanbook.me/resources/pics/ycbm-button.png" style="border-style:none;"/></a>
-   <% }else{ %>
   </div>
-  <a href="/users/new" data-ycbm-modal="true"><img src="https://youcanbook.me/resources/pics/ycbm-button.png" style="border-style:none;"/></a>
-  <% } %> 
-  <!-- https://images.unsplash.com/photo-1520839090488-4a6c211e2f94?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=38951b8650067840307cba514b554ba5&auto=format&fit=crop&w=1350&q=80 -->
+ 
 
   <% } %> 
   </section>
