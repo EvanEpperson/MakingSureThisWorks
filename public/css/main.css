@@ -185,9 +185,9 @@ a {
   .cards-wrapper {
     padding: 4rem 2rem;
   }
-  /* .card {
-    max-width: calc(100vw - 4rem);
-  } */
+  .card {
+    max-width: calc(100vw - 3em);
+  }
 }
 
 @media screen and (max-width: 450px) {
