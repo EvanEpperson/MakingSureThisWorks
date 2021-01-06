@@ -48,12 +48,22 @@
       </div>
     </div>
   </div>
-  <div class="card form">
+  <% if (currentUser) { %>
+     <div class="card form">
     <a href="https://eppco.youcanbook.me/" target="_blank">
     <div class="form-title">
       Schedule Now
       </div>      
     </a>
+  <% }else{ %>
+  <div class="card form">
+    <a href="/users/new" >
+    <div class="form-title">
+      Schedule Now
+      </div>      
+    </a>
+
+  <% } %> 
     <div class="form-title">
       
       </div>
