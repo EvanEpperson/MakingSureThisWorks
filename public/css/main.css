@@ -181,14 +181,14 @@ a {
   }
 }
 
-/* @media screen and (max-width: 500px) {
+@media screen and (max-width: 500px) {
   .cards-wrapper {
     padding: 4rem 2rem;
   }
-  .card {
+  /* .card {
     max-width: calc(100vw - 4rem);
-  }
-} */
+  } */
+}
 
 @media screen and (max-width: 450px) {
   .info {
