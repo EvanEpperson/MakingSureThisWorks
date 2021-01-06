@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Roboto:300,900");
+/* @import url("https://fonts.googleapis.com/css?family=Roboto:300,900");
 html,
 body {
   background: #252833;
@@ -174,7 +174,7 @@ body * {
 
 
   .card-label{
-      position: absolute;
+  position: absolute;
   top: 0.45rem;
   left: 0.45rem;
   background: #089f8a;
@@ -194,4 +194,4 @@ body * {
   .btn-outline-warning{
     font-size: 2vw !important;
   }
-}
+} */
