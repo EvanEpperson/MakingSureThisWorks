@@ -59,7 +59,7 @@
   <div class="card form">
     <a href="/users/new" >
     <div class="form-title">
-      Schedule Now
+      Login to Schedule Now
       </div>      
     </a>
 
@@ -68,10 +68,36 @@
       
       </div>
   </div>
+  <% if (currentUser) { %>
 <div>
   <a href="/main">
     <button class="btn btn-outline-warning">Back to Teachers</button>
   </a>
+</div>
+<div>
+  <form action="mailto:gatest010@gmail.com">
+  <!-- <a href="/main"> -->
+    <button class="btn btn-outline-primary" type="submit">Ask A Question</button>
+  <!-- </a> -->
+  </form>
+  <% }else{ %>
+<div>
+  <a href="/main">
+    <button class="btn btn-outline-warning">Back to Teachers</button>
+  </a>
+</div>
+<div>
+  <!-- <form action="mailto:gatest010@gmail.com"> -->
+  <a href="/users/new">
+    <button class="btn btn-outline-warning">Login to Ask a Question</button>
+  </a>
+  <!-- </form> -->
+
+
+
+    <% } %> 
+
+
 </div>
 </div>
 

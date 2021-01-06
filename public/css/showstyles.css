@@ -93,6 +93,22 @@ body * {
   padding: 0.5em;
 }
 
+
+
+
+
+
+
+
+
+
+
+/* media query for smaller screens  */
+
+
+
+
+
 @media screen and (max-width: 500px){
   .cards {
   width: calc(100% - 2em);
@@ -119,11 +135,21 @@ body * {
   }
 
   .form-title {
-  font-size: 5vw !important;
+  font-size: 4vw !important;
   font-weight: 900;
   padding-right: 10px;
   }
+  .btn-outline-warning{
+    font-size: 2vw !important;
+  }
 }
+
+
+
+
+
+
+
 
 .card-title {
   position: absolute;
