@@ -1,4 +1,4 @@
-/* @import url("https://fonts.googleapis.com/css?family=Roboto:300,900");
+@import url("https://fonts.googleapis.com/css?family=Roboto:300,900");
 html,
 body {
   background: #252833;
@@ -194,4 +194,4 @@ body * {
   .btn-outline-warning{
     font-size: 2vw !important;
   }
-} */
+}
