@@ -36,7 +36,7 @@ student.put('/:id', admin, (req, res) => {
   })
 })
 
-student.get('/teacherrequest', isAuthenticated,(req, res) => {
+student.get('/teacherrequest', (req, res) => {
   res.render('student/teacherRequest.ejs')
 })
 
@@ -66,7 +66,6 @@ student.get("/", isAuthenticated, (req, res) => {
       currentAdmin: req.session.currentAdmin,
     });
   });
-  res.redirect(req.session.returnTo || '/')
 });
 
 
