@@ -58,14 +58,15 @@ student.get('/:id/edit', admin, (req, res) => {
   })
 })
 
-student.get("/", isAuthenticated, (req, res, next) => {
+student.get("/", isAuthenticated, (req, res) => {
   Student.find({}, (err, allStudents) => {
     res.render("student/studentindex.ejs", {
       data: allStudents,
       currentUser: req.session.currentUser,
-      currentAdmin: req.session.currentAdmin
+      currentAdmin: req.session.currentAdmin,
     });
   });
+  res.redirect(req.session.returnTo || '/')
 });
 
 
