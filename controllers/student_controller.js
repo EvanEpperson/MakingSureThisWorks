@@ -1,3 +1,4 @@
+const { render } = require('ejs');
 const express = require('express');
 const Student = require('../models/student.js')
 const student = express.Router()
@@ -6,9 +7,20 @@ const isAuthenticated = (req, res, next) => {
   if (req.session.currentUser) {
     return next();
   } else {
-    res.redirect("/users/new");
+    res.redirect("/users/new"),
+    res.redirect('/student')
   }
 };
+
+
+const testing = (req, res, next ) => {
+  if(!req.session.currentUser){
+    req.session.redirectTo = '/student'
+    res.redirect('/users/new')
+  } else {
+    next();
+  }
+}
 
 const admin = (req, res, next) => {
   if(req.session.currentAdmin){

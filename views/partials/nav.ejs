@@ -42,25 +42,30 @@
 
 
             <!-- made it admin or user so i dont have to be logged in on both to access everything -->
-            <% if (currentUser){%>
-            <li><a class="dropdown-item" href="/student">Learn About More Student Teachers</a></li>
-
-            <%} else if (currentAdmin) {%>
+            <!-- <#% if (currentUser){%> -->
             <li><a class="dropdown-item" href="/student/">Learn About More Student Teachers</a></li>
 
-              <%}else {%>
+            <!-- <#%} else if (currentAdmin) {%> -->
+            <li><a class="dropdown-item" href="/student/">Learn About More Student Teachers</a></li>
+
+              <!-- <#%}else {%> -->
               <li><a class="dropdown-item" href="/users/new" >Learn About More Student Teachers</a></li>
-
-              <%}%>
+                
+              <!-- <#%}%> -->
                  <!-- end of else -->
-
+                <!-- window.location.pathname = "/student" -->
 
 
 
 
             <li><a class="dropdown-item" href="https://generalassemb.ly/" target="_blank" >Learn About GA</a></li>
             <li><hr class="dropdown-divider"></li>
+            <% if (currentUser){ %> 
             <li><a class="dropdown-item" href="/student/teacherrequest" target="_blank" >Contact Admins About Becoming A Teacher</a></li>
+              <% }else { %>
+            <li><a class="dropdown-item" href="/users/new" target="_blank" >Contact Admins About Becoming A Teacher</a></li>
+                
+              <% } %> 
           </ul>
         </li>
       </ul>
