@@ -2,14 +2,14 @@ const bcrypt = require('bcrypt');
 const express = require('express');
 const sessions = express.Router();
 const User = require('../models/users.js');
-
+// not using this for sessions anymore because i have it all in users but i still need the second part
 sessions.get('/new', (req, res) => {
     res.render('sessions/new.ejs', 
     {
         currentUser: req.session.currentUser
     })
 })
-
+// what actually makes the session happen when it sees the same username created before hand 
 sessions.post("/", (req, res) => {
   User.findOne({ username: req.body.username }, (err, foundUser) => {
     if (err) {

@@ -1,7 +1,7 @@
 const express = require('express');
 const Student = require('../models/student.js')
 const student = express.Router()
-
+// for users to have to log in 
 const isAuthenticated = (req, res, next) => {
   if (req.session.currentUser) {
     return next();
@@ -10,7 +10,7 @@ const isAuthenticated = (req, res, next) => {
   }
 };
 
-
+// trying redirect routes , only test for now 
 const testing = (req, res, next ) => {
   if(!req.session.currentUser){
     req.session.redirectTo = '/student'
@@ -19,7 +19,7 @@ const testing = (req, res, next ) => {
     next();
   }
 }
-
+// admin middleware so you have to be an admin to go to these specific pages 
 const admin = (req, res, next) => {
   if(req.session.currentAdmin){
     return next();
@@ -28,35 +28,35 @@ const admin = (req, res, next) => {
     // put it to a new folder to fill out for admins to edit things around 
   }
 }
-
+// making a new student with show page also only admin 
 student.get("/new",  (req, res) => {
   res.render("student/studentnew.ejs", { currentUser: req.session.currentUser });
 });
 
-
+// delete also only seen by admin with the if else on show page 
 student.delete('/:id', (req, res) => {
   Student.findByIdAndRemove(req.params.id, (error, deletedstudent) => {
     res.redirect('/student')
   })
 })
-
+// first update route to actually update, this is only seen by admin and is on the student show page also with if else 
 student.put('/:id', admin, (req, res) => {
   Student.findByIdAndUpdate(req.params.id, req.body, {new: true}, (error, foundStudent) => {
     res.redirect('/student')
   })
 })
-
+// teacher request form that will let you email me about becoming a student teacher 
 student.get('/teacherrequest', (req, res) => {
   res.render('student/teacherRequest.ejs')
 })
-
+// this is the request form that everyone can see that will bring you to the email form i have 
 student.get('/editrequestform', (req, res) => {
   res.render('student/studentContact.ejs', 
   {
     currentAdmin: req.session.currentAdmin
   })
 })
-
+// student edit page , should only be seen by admin and thats on the student show page .ejs 
 student.get('/:id/edit', admin, (req, res) => {
   Student.findById(req.params.id, (error, foundStudent) => {
     res.render('student/studentedit.ejs', 
@@ -67,7 +67,7 @@ student.get('/:id/edit', admin, (req, res) => {
     })
   })
 })
-
+// Main Student page , Index you need authorization to access this page 
 student.get("/", isAuthenticated, (req, res) => {
   Student.find({}, (err, allStudents) => {
     res.render("student/studentindex.ejs", {
@@ -78,7 +78,7 @@ student.get("/", isAuthenticated, (req, res) => {
   });
 });
 
-
+// show page for students 
 student.get('/:index', (req, res) => {
     Student.findById(req.params.index, (err, allStudents) => {
         res.render('student/studentshow.ejs', {
@@ -88,7 +88,7 @@ student.get('/:index', (req, res) => {
         })
     })
 })
-
+// last route to post everything 
 student.post('/', (req, res) => {
   Student.create(req.body, (error, createdStudent ) => {
     res.redirect('/student')
