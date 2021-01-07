@@ -9,7 +9,7 @@ const isAuthenticated = (req, res, next) => {
     res.redirect("/users/new");
   }
 };
-// testing
+
 // trying redirect routes , only test for now 
 const testing = (req, res, next ) => {
   if(!req.session.currentUser){
