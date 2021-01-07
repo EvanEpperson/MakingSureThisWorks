@@ -11,13 +11,13 @@ const isAuthenticated = (req, res, next) => {
   }
 };
 
-
+//delete route for teachers , only accessible to admins
 main.delete("/:id", (req, res) => {
   Main.findByIdAndRemove(req.params.id, (error, deletedTeacher) => {
     res.redirect("/main");
   });
 });
-
+// main page that shows all of the teachers with index page 
 main.get('/',  (req, res) => {
     Main.find({}, (err, allMains) => {
            res.render("main/index.ejs", 
@@ -29,6 +29,7 @@ main.get('/',  (req, res) => {
     })
 })
 
+// show page for each teacher , 
 main.get("/:index",  (req, res) => {
   Main.findById(req.params.index, (err, allMains) => {
     res.render("main/show.ejs", {
