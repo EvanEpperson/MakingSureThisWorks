@@ -105,25 +105,5 @@ main.get("/:index",  (req, res) => {
 // })
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 //
 module.exports = main 
